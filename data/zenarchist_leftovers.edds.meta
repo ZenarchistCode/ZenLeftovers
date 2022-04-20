@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{BADB36ED801AE266}ZenLeftovers/data/zenarchist.edds"
+ Author "thoth-2022"
+ ChangeDate 743189645
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "zenarchist.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

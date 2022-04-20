@@ -1,0 +1,75 @@
+// NOTE: These comments will break the JSON file so don't include them
+// OriginalItemType is the item you consume
+// LeftoverItemType is the item that is dropped as junk
+// ItemHealth is the HP of the junk item: 0 means replace HP with original item, -1 means ruined, 1 means badly damaged, 100 means full HP
+// The quantity of the junk item will be set to zero so health doesn't matter - it's more for aesthetics as some damaged items look more "used"
+{
+    "CraftJunkHookHP": 10,
+    "LeftoverItems": [
+		{
+            "OriginalItemType": "Honey",
+            "LeftoverItemType": "Empty_Honey_NoLiquid", // Example of how to use empty food jar but with no ability to fill with water
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREPB",
+            "LeftoverItemType": "MassMREPB",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREJelly",
+            "LeftoverItemType": "MassMREJelly",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREGrapeJelly",
+            "LeftoverItemType": "MassMREGrapeJelly",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMRETobasco",
+            "LeftoverItemType": "MassMRETobasco",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREHotCheeseSpread",
+            "LeftoverItemType": "MassMREHotCheeseSpread",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREDBBPudding",
+            "LeftoverItemType": "MassMREDBBPudding",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREDBBCobbler",
+            "LeftoverItemType": "MassMREDBBCobbler",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMRETobasco",
+            "LeftoverItemType": "MassMRETobasco",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREMCSpaghetti",
+            "LeftoverItemType": "MassMREMCSpaghetti",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREMCBeefTaco",
+            "LeftoverItemType": "MassMREMCBeefTaco",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREMCChilliMac",
+            "LeftoverItemType": "MassMREMCChilliMac",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREMCBeefStew",
+            "LeftoverItemType": "MassMREMCBeefStew",
+            "ItemHealth": 1
+        }
+    ]
+}

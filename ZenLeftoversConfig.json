@@ -1,0 +1,240 @@
+{
+    "CraftJunkHookHP": 10,
+    "LeftoverItems": [
+        {
+            "OriginalItemType": "SodaCan_Pipsi",
+            "LeftoverItemType": "Empty_SodaCan_Pipsi",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "SodaCan_Cola",
+            "LeftoverItemType": "Empty_SodaCan_Cola",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "SodaCan_Spite",
+            "LeftoverItemType": "Empty_SodaCan_Spite",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "SodaCan_Kvass",
+            "LeftoverItemType": "Empty_SodaCan_Kvass",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "SodaCan_Fronta",
+            "LeftoverItemType": "Empty_SodaCan_Fronta",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "BoxCerealCrunchin",
+            "LeftoverItemType": "Empty_BoxCerealCrunchin",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "Rice",
+            "LeftoverItemType": "Empty_Rice",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "PowderedMilk",
+            "LeftoverItemType": "Empty_PowderedMilk",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "Marmalade",
+            "LeftoverItemType": "Empty_Marmalade",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "Honey",
+            "LeftoverItemType": "Empty_Honey",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "Zagorky",
+            "LeftoverItemType": "Empty_Zagorky",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "ZagorkyChocolate",
+            "LeftoverItemType": "Empty_ZagorkyChocolate",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "ZagorkyPeanuts",
+            "LeftoverItemType": "Empty_ZagorkyPeanuts",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "SaltySticks",
+            "LeftoverItemType": "Empty_SaltySticks",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "Crackers",
+            "LeftoverItemType": "Empty_Crackers",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "Chips",
+            "LeftoverItemType": "Empty_Chips",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "BakedBeansCan_Opened",
+            "LeftoverItemType": "Empty_BakedBeansCan_Opened",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "PeachesCan_Opened",
+            "LeftoverItemType": "Empty_PeachesCan_Opened",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "TacticalBaconCan_Opened",
+            "LeftoverItemType": "Empty_TacticalBaconCan_Opened",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "SpaghettiCan_Opened",
+            "LeftoverItemType": "Empty_SpaghettiCan_Opened",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "UnknownFoodCan_Opened",
+            "LeftoverItemType": "Empty_UnknownFoodCan_Opened",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "SardinesCan_Opened",
+            "LeftoverItemType": "Empty_SardinesCan_Opened",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "TunaCan_Opened",
+            "LeftoverItemType": "Empty_TunaCan_Opened",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "DogFoodCan_Opened",
+            "LeftoverItemType": "Empty_DogFoodCan_Opened",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "CatFoodCan_Opened",
+            "LeftoverItemType": "Empty_CatFoodCan_Opened",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "PorkCan_Opened",
+            "LeftoverItemType": "Empty_PorkCan_Opened",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "Lunchmeat_Opened",
+            "LeftoverItemType": "Empty_Lunchmeat_Opened",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "Pate_Opened",
+            "LeftoverItemType": "Empty_Pate_Opened",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "Pajka_Opened",
+            "LeftoverItemType": "Empty_Pate_Opened",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "BrisketSpread_Opened",
+            "LeftoverItemType": "Empty_BrisketSpread_Opened",
+            "ItemHealth": 0
+        },
+        {
+            "OriginalItemType": "BloodBagIV",
+            "LeftoverItemType": "Used_BloodBagIV",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "SalineBagIV",
+            "LeftoverItemType": "Used_SalineBagIV",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "Morphine",
+            "LeftoverItemType": "Used_Morphine",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "Epinephrine",
+            "LeftoverItemType": "Used_Epinephrine",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "AntiChemInjector",
+            "LeftoverItemType": "Used_AntiChemInjector",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREPB",
+            "LeftoverItemType": "MassMREPB",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREJelly",
+            "LeftoverItemType": "MassMREJelly",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREGrapeJelly",
+            "LeftoverItemType": "MassMREGrapeJelly",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMRETobasco",
+            "LeftoverItemType": "MassMRETobasco",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREHotCheeseSpread",
+            "LeftoverItemType": "MassMREHotCheeseSpread",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREDBBPudding",
+            "LeftoverItemType": "MassMREDBBPudding",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREDBBCobbler",
+            "LeftoverItemType": "MassMREDBBCobbler",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMRETobasco",
+            "LeftoverItemType": "MassMRETobasco",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREMCSpaghetti",
+            "LeftoverItemType": "MassMREMCSpaghetti",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREMCBeefTaco",
+            "LeftoverItemType": "MassMREMCBeefTaco",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREMCChilliMac",
+            "LeftoverItemType": "MassMREMCChilliMac",
+            "ItemHealth": 1
+        },
+        {
+            "OriginalItemType": "MassMREMCBeefStew",
+            "LeftoverItemType": "MassMREMCBeefStew",
+            "ItemHealth": 1
+        }
+    ]
+}
