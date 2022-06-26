@@ -12,7 +12,6 @@ void DropJunk(ActionData action_data)
 			{
 				string itemType = item.GetType();
 				itemType = itemType.Substring(4, itemType.Length());
-				action_data.m_Player.ZS_SendMessage("ItemType = " + itemType);
 				li = GetLeftoversConfig().GetLeftoverItem(itemType); // Namalsk frozen item support
 			}
 		}
