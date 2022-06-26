@@ -95,7 +95,7 @@ class CraftJunkHookRecipe extends RecipeBase
 
 		/*m_ResultSetFullQuantity[0] = false;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = -1;//-1 = do nothing
-		m_ResultSetHealth[0] = 1; // Doesn't seem to work?
+		m_ResultSetHealth[0] = 1; // Doesn't seem to work? Moving this to Do()
 		m_ResultInheritsHealth[0] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
 		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
@@ -105,7 +105,10 @@ class CraftJunkHookRecipe extends RecipeBase
 
 	override void Do(ItemBase ingredients[], PlayerBase player, array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
 	{
-		ItemBase hook = GetGame().CreateObjectEx("Hook", player.GetPosition(), ECE_PLACE_ON_SURFACE);
-		hook.SetHealth(GetLeftoversConfig().CraftJunkHookHP);
+		ItemBase hook = ItemBase.Cast(GetGame().CreateObjectEx("Hook", player.GetPosition(), ECE_PLACE_ON_SURFACE));
+		if (hook)
+		{
+			hook.SetHealth(GetLeftoversConfig().CraftJunkHookHP);
+		}
 	}
 }
