@@ -39,7 +39,8 @@ This mod comes with a json config file that you can modify to add extra items. A
 {
     "OriginalItemType": "Food_Type_Name",
     "LeftoverItemType": "Junk_Type_Name",
-    "ItemHealth": 1
+    "ItemHealth": 1,
+    "DropToGround": 0
 }
 
 It'll work with any item, doesn't necessarily need to be food (could be meds too for example).
@@ -47,8 +48,9 @@ It'll work with any item, doesn't necessarily need to be food (could be meds too
 OriginalItemType is the item you consume.
 LeftoverItemType is the item that is dropped on the ground after.
 ItemHealth is the HP of the junk item - 0 means inherit health from the original item, -1 means ruined, 1-100 means HP (1 = badly damaged).
+DropToGround is a true/false 1/0 value - 0 means the junk item will be placed in the player's hands, 1 means the item will be dropped onto the ground.
 
-You can also disable the use of empty jars as water containers by changing the LeftoverItemType for honey and marmalade to Empty_Honey_NoLiquid and Empty_Marmalade_NoLiquid.
+You can also disable the use of empty jars as water containers by changing the LeftoverItemType for honey and marmalade to Empty_Honey_NoLiquid and Empty_Marmalade_NoLiquid (particularly useful for Namalsk as the default Empty model doesn't freeze).
 
 Repacking & Credits:
 
@@ -60,6 +62,9 @@ Source Code:
 https://github.com/ZenarchistCode/ZenLeftovers
 
 
+
+5th August 2022 Update Changelog:
+Added the option to drop items onto the ground or have the junk item remain in the player's hands.
 
 18th April 2022 Update Changelog:
 I made a few adjustments to make this mod a tiny bit more interesting and make some items not completely useless, but I don't think I'll tweak it much further as I want it to be a junk mod not a crafting mod.

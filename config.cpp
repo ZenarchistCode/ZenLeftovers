@@ -50,7 +50,20 @@ class CfgMods
 
 class CfgVehicles
 {
+	//class Inventory_Base;
+	//class Edible_Base : Inventory_Base
+	//{
+	//	destroyOnEmpty = 0; // This works, but I don't like this. There must be a better way?
+	//	varQuantityDestroyOnMin = 0;
+	//};
+	//class SodaCan_ColorBase : Edible_Base
+	//{
+	//	destroyOnEmpty = 0; // This works, but I don't like this. There must be a better way?
+	//	varQuantityDestroyOnMin = 0;
+	//}
+
 	// Define empty food items:
+	class Edible_Base;
 	class SodaCan_Pipsi;
 	class Empty_SodaCan_Pipsi : SodaCan_Pipsi
 	{
@@ -106,7 +119,8 @@ class CfgVehicles
 		varQuantityMax = 0;
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\sodacan_fanda_empty_co.paa" };
 	};
-	class Edible_Base;
+
+	// Edibles
 	class Empty_BoxCerealCrunchin : Edible_Base
 	{
 		scope = 2;
