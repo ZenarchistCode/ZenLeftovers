@@ -2,9 +2,10 @@ class LeftoversConfig
 {
 	// Config location
 	private const static string zenModFolder = "$profile:\\Zenarchist\\";
-	private const static string zenConfigName = "ZenLeftoversConfig_v2.json";
+	private const static string zenConfigName = "ZenLeftoversConfig.json";
 
 	// Config data
+	string ConfigVersion = "";
 	int CraftJunkHookHP = 10;
 	ref array<ref LeftoverItem> LeftoverItems = new array<ref LeftoverItem>;
 
@@ -16,6 +17,14 @@ class LeftoversConfig
 			if (FileExist(zenModFolder + zenConfigName))
 			{ // If config exists, load file
 				JsonFileLoader<LeftoversConfig>.JsonLoadFile(zenModFolder + zenConfigName, this);
+
+				// Backup old version of json before replacing it
+				if (ConfigVersion != "2")
+				{
+					JsonFileLoader<LeftoversConfig>.JsonSaveFile(zenModFolder + zenConfigName + "_old", this);
+					ConfigVersion = "2";
+					Save();
+				}
 			}
 			else 
 			{ // Config file does not exist, create default file

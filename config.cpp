@@ -5,7 +5,9 @@ class CfgPatches
 		requiredVersion = 0.1;
 		requiredAddons[] =
 		{
-			"DZ_Data"
+			"DZ_Data",
+			"DZ_Gear_Consumables",
+			"DZ_Gear_Drinks"
 		};
 	};
 };
@@ -23,7 +25,7 @@ class CfgMods
 		credits = "";
 		author = "Zenarchist";
 		authorID = "0";
-		version = "1.03";
+		version = "1.04";
 		extra = 0;
 		type = "mod";
 		dependencies[] = { "Game","World","Mission" };
@@ -50,73 +52,42 @@ class CfgMods
 
 class CfgVehicles
 {
-	//class Inventory_Base;
-	//class Edible_Base : Inventory_Base
-	//{
-	//	destroyOnEmpty = 0; // This works, but I don't like this. There must be a better way?
-	//	varQuantityDestroyOnMin = 0;
-	//};
-	//class SodaCan_ColorBase : Edible_Base
-	//{
-	//	destroyOnEmpty = 0; // This works, but I don't like this. There must be a better way?
-	//	varQuantityDestroyOnMin = 0;
-	//}
-
 	// Define empty food items:
 	class Edible_Base;
-	class SodaCan_Pipsi;
-	class Empty_SodaCan_Pipsi : SodaCan_Pipsi
+	class SodaCan_ColorBase;
+	class Empty_SodaCan_ColorBase : SodaCan_ColorBase 
 	{
-		scope = 2;
+		scope = 0;
 		displayName = "Empty Can";
 		descriptionShort = "An empty drink can. It must have been recently discarded by a survivor...";
 		varQuantityInit = 0;
 		varQuantityMin = 0;
 		varQuantityMax = 0;
+	};
+	//class SodaCan_Pipsi;
+	class Empty_SodaCan_Pipsi : Empty_SodaCan_ColorBase
+	{
+		scope = 2;
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\sodacan_pipsi_empty_co.paa" };
 	};
-	class SodaCan_Cola;
-	class Empty_SodaCan_Cola : SodaCan_Cola
+	class Empty_SodaCan_Cola : Empty_SodaCan_ColorBase
 	{
 		scope = 2;
-		displayName = "Empty Can";
-		descriptionShort = "An empty drink can. It must have been recently discarded by a survivor...";
-		varQuantityInit = 0;
-		varQuantityMin = 0;
-		varQuantityMax = 0;
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\sodacan_cola_empty_co.paa" };
 	};
-	class SodaCan_Spite;
-	class Empty_SodaCan_Spite : SodaCan_Spite
+	class Empty_SodaCan_Spite : Empty_SodaCan_ColorBase
 	{
 		scope = 2;
-		displayName = "Empty Can";
-		descriptionShort = "An empty drink can. It must have been recently discarded by a survivor...";
-		varQuantityInit = 0;
-		varQuantityMin = 0;
-		varQuantityMax = 0;
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\sodacan_spite_empty_co.paa" };
 	};
-	class SodaCan_Kvass;
-	class Empty_SodaCan_Kvass : SodaCan_Kvass
+	class Empty_SodaCan_Kvass : Empty_SodaCan_ColorBase
 	{
 		scope = 2;
-		displayName = "Empty Can";
-		descriptionShort = "An empty drink can. It must have been recently discarded by a survivor...";
-		varQuantityInit = 0;
-		varQuantityMin = 0;
-		varQuantityMax = 0;
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\sodacan_rasputin_kvass_empty_co.paa" };
 	};
-	class SodaCan_Fronta;
-	class Empty_SodaCan_Fronta : SodaCan_Fronta
+	class Empty_SodaCan_Fronta : Empty_SodaCan_ColorBase
 	{
 		scope = 2;
-		displayName = "Empty Can";
-		descriptionShort = "An empty drink can. It must have been recently discarded by a survivor...";
-		varQuantityInit = 0;
-		varQuantityMin = 0;
-		varQuantityMax = 0;
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\sodacan_fanda_empty_co.paa" };
 	};
 
