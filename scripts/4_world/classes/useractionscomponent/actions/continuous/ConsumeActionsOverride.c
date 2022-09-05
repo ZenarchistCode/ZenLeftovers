@@ -10,17 +10,20 @@ void DropJunk(ActionData action_data)
 	{
 		LeftoverItem li = GetLeftoversConfig().GetLeftoverItem(item.GetType());
 
-		if (!li || (li.OriginalItemType == "" && li.LeftoverItemType == ""))
+		#ifdef NAMALSK_SURVIVAL
+		if (!li || li.OriginalItemType == "" || li.LeftoverItemType == "")
 		{
-			if (item.GetType().Contains("dzn_"))
+			string itemType = item.GetType();
+			itemType.ToLower();
+			if (itemType.Contains("dzn_"))
 			{
-				string itemType = item.GetType();
-				itemType = itemType.Substring(4, itemType.Length());
+				itemType.Replace("dzn_", "");
 				li = GetLeftoversConfig().GetLeftoverItem(itemType); // Namalsk frozen item support
 			}
 		}
+		#endif
 
-		if (li && li.OriginalItemType != "" && li.LeftoverItemType != "") // Junk item found! Drop it on the ground.
+		if (li && li.OriginalItemType != "" && li.LeftoverItemType != "") // Junk item found!
 		{
 			float health = item.GetHealth();
 			if (li.ItemHealth != 0)
@@ -38,7 +41,7 @@ void DropJunk(ActionData action_data)
 			}
 			else // Replacing item in hands
 			{
-				action_data.m_Player.GetHumanInventory().ReplaceItemWithNew(InventoryMode.PREDICTIVE, new ReplaceJunkLambda(item, li.LeftoverItemType, health));
+				action_data.m_Player.GetHumanInventory().ReplaceItemWithNew(InventoryMode.SERVER, new ReplaceJunkLambda(item, li.LeftoverItemType, health));
 			}
 		}
 	}
@@ -151,7 +154,7 @@ class ReplaceJunkLambda : ReplaceItemWithNewLambdaBase
 		if (newItem)
 		{
 			newItem.SetHealth(m_NewItemHealth);
-			newItem.SetQuantity(0, false, false); // false, false overrides the game deleting some edibles with <= 0 quantity.
+			newItem.SetQuantity(0.01, false, false); // false, false overrides the game deleting some edibles with <= 0 quantity.
 		}
 	}
 };

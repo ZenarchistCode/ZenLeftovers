@@ -40,3 +40,6 @@ class Empty_SodaCan_ColorBase : SodaCan_ColorBase
 		RemoveAction(ActionDrinkCan);
 	}
 };
+
+#ifdef NAMALSK_SURVIVAL
+#endif

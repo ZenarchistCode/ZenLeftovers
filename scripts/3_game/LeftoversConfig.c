@@ -1,5 +1,8 @@
 class LeftoversConfig
 {
+	// Set master config version (not saved to json)
+	private static const string CONFIG_VERSION = "2";
+
 	// Config location
 	private const static string zenModFolder = "$profile:\\Zenarchist\\";
 	private const static string zenConfigName = "ZenLeftoversConfig.json";
@@ -19,10 +22,10 @@ class LeftoversConfig
 				JsonFileLoader<LeftoversConfig>.JsonLoadFile(zenModFolder + zenConfigName, this);
 
 				// If version mismatch, backup old version of json before replacing it
-				if (ConfigVersion != "2")
+				if (ConfigVersion != CONFIG_VERSION)
 				{
 					JsonFileLoader<LeftoversConfig>.JsonSaveFile(zenModFolder + zenConfigName + "_old", this);
-					ConfigVersion = "2";
+					ConfigVersion = CONFIG_VERSION;
 				}
 				else
 				{
@@ -30,8 +33,17 @@ class LeftoversConfig
 					return;
 				}
 			}
+
+			// Clear old config if it exists
+			LeftoverItems.Clear();
+
+			// Set new config version
+			ConfigVersion = CONFIG_VERSION;
+
+			// Set default config
+			CraftJunkHookHP = 10;
 			
-			// Config file does not exist, create default file
+			// Set default leftover items
 			LeftoverItems.Insert(new LeftoverItem("SodaCan_Pipsi", "Empty_SodaCan_Pipsi", 0));
 			LeftoverItems.Insert(new LeftoverItem("SodaCan_Cola", "Empty_SodaCan_Cola", 0));
 			LeftoverItems.Insert(new LeftoverItem("SodaCan_Spite", "Empty_SodaCan_Spite", 0));
@@ -106,7 +118,7 @@ class LeftoversConfig
 		{
 			string toFind = LeftoverItems.Get(i).OriginalItemType;
 			toFind.ToLower();
-			if (itemType == toFind) // Use Contains() to find similar items with an item base (eg. Zagorky / ZagorkyChocolate)
+			if (itemType.Contains(toFind))
 			{
 				return LeftoverItems.Get(i);
 			}

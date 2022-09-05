@@ -78,5 +78,4 @@ Made it so you can get paper out of some paper-based food wrappers (new action w
 
 Made it so you can use empty jam and honey jars to store liquids (only 250mL - 25% of a normal bottle/canteen, very fragile and easy to ruin).
 
-30th August 2022 Update Changelog:
-Removed "drink" action from empty soda cans. Made it so any future changes to json config structure will cause the mod to automatically back up the old json config and generate a new one.
+You'll need to copy over your old JSON config to the new config file for the mod to properly load your settings.
