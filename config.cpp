@@ -53,13 +53,16 @@ class CfgMods
 class CfgVehicles
 {
 	// Define empty food items:
-	class Edible_Base;
+	class Inventory_Base;
+	class Zen_EmptyFood : Inventory_Base 
+	{
+		displayNameEmpty = "$STR_ZenLeftoversEmpty";
+	};
+
 	class SodaCan_ColorBase;
 	class Empty_SodaCan_ColorBase : SodaCan_ColorBase 
 	{
 		scope = 0;
-		displayName = "Empty Can";
-		descriptionShort = "An empty drink can. It must have been recently discarded by a survivor...";
 		varQuantityInit = 0;
 		varQuantityMin = 0;
 		varQuantityMax = 0;
@@ -68,35 +71,40 @@ class CfgVehicles
 	class Empty_SodaCan_Pipsi : Empty_SodaCan_ColorBase
 	{
 		scope = 2;
+		displayName = "$STR_CfgVehicles_SodaCan_Pipsi0";
+		descriptionShort = "$STR_ZenLeftoversDescription";
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\sodacan_pipsi_empty_co.paa" };
 	};
 	class Empty_SodaCan_Cola : Empty_SodaCan_ColorBase
 	{
 		scope = 2;
+		displayName = "$STR_CfgVehicles_SodaCan_Cola0";
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\sodacan_cola_empty_co.paa" };
 	};
 	class Empty_SodaCan_Spite : Empty_SodaCan_ColorBase
 	{
 		scope = 2;
+		displayName = "$STR_CfgVehicles_SodaCan_Spite0";
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\sodacan_spite_empty_co.paa" };
 	};
 	class Empty_SodaCan_Kvass : Empty_SodaCan_ColorBase
 	{
 		scope = 2;
+		displayName = "$STR_CfgVehicles_SodaCan_Kvass0";
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\sodacan_rasputin_kvass_empty_co.paa" };
 	};
 	class Empty_SodaCan_Fronta : Empty_SodaCan_ColorBase
 	{
 		scope = 2;
+		displayName = "$STR_CfgVehicles_SodaCan_Fronta0";
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\sodacan_fanda_empty_co.paa" };
 	};
 
 	// Edibles
-	class Empty_BoxCerealCrunchin : Edible_Base
+	class Empty_BoxCerealCrunchin : Zen_EmptyFood
 	{
 		scope = 2;
-		displayName = "Empty Box";
-		descriptionShort = "An empty box of cereal. It must have been recently discarded by a survivor...";
+		displayName = "$STR_CfgVehicles_BoxCerealCrunchin0";
 		model = "\dz\gear\food\BoxCereal.p3d";
 		debug_ItemCategory = 6;
 		rotationFlags = 17;
@@ -106,6 +114,10 @@ class CfgVehicles
 		varQuantityMin = 0;
 		varQuantityMax = 0;
 		isMeleeWeapon = 1;
+		inventorySlot[] =
+		{
+			"Paper"
+		};
 		hiddenSelections[] =
 		{
 			"camoGround"
@@ -184,11 +196,10 @@ class CfgVehicles
 			};
 		};
 	};
-	class Empty_Rice : Edible_Base
+	class Empty_Rice : Zen_EmptyFood
 	{
 		scope = 2;
-		displayName = "Empty Packet";
-		descriptionShort = "An empty packet of rice. It must have been recently discarded by a survivor...";
+		displayName = "$STR_CfgVehicles_Rice0";
 		model = "\dz\gear\food\Rice.p3d";
 		debug_ItemCategory = 6;
 		weight = 0;
@@ -252,11 +263,10 @@ class CfgVehicles
 			};
 		};
 	};
-	class Empty_PowderedMilk : Edible_Base
+	class Empty_PowderedMilk : Zen_EmptyFood
 	{
 		scope = 2;
-		displayName = "Empty Packet";
-		descriptionShort = "An empty packet of powdered milk. It must have been recently discarded by a survivor...";
+		displayName = "$STR_CfgVehicles_PowderedMilk0";
 		model = "\dz\gear\food\PowderedMilk.p3d";
 		debug_ItemCategory = 6;
 		rotationFlags = 17;
@@ -344,11 +354,10 @@ class CfgVehicles
 			};
 		};
 	};
-	class Empty_Honey_NoLiquid : Edible_Base
+	class Empty_Honey_NoLiquid : Zen_EmptyFood
 	{
 		scope = 2;
-		displayName = "Empty Jar";
-		descriptionShort = "An empty food jar. It must have been recently discarded by a survivor...";
+		displayName = "$STR_Honey0";
 		model = "\dz\gear\food\Honey.p3d";
 		debug_ItemCategory = 6;
 		weight = 15;
@@ -424,11 +433,10 @@ class CfgVehicles
 			};
 		};
 	};
-	class Empty_Marmalade_NoLiquid : Edible_Base
+	class Empty_Marmalade_NoLiquid : Zen_EmptyFood
 	{
 		scope = 2;
-		displayName = "Empty Jar";
-		descriptionShort = "An empty food jar. It must have been recently discarded by a survivor...";
+		displayName = "$STR_CfgVehicles_Marmalade0";
 		model = "\dz\gear\food\Marmalade.p3d";
 		debug_ItemCategory = 6;
 		weight = 0;
@@ -505,8 +513,7 @@ class CfgVehicles
 	class Empty_Honey : Bottle_Base
 	{
 		scope = 2;
-		displayName = "Used Jar";
-		descriptionShort = "A used food jar. It must have been recently discarded by a survivor...";
+		displayName = "$STR_Honey0";
 		model = "\dz\gear\food\Honey.p3d";
 		debug_ItemCategory = 6;
 		weight = 15;
@@ -622,8 +629,7 @@ class CfgVehicles
 	class Empty_Marmalade : Bottle_Base
 	{
 		scope = 2;
-		displayName = "Used Jar";
-		descriptionShort = "A used food jar. It must have been recently discarded by a survivor...";
+		displayName = "$STR_CfgVehicles_Marmalade0";
 		model = "\dz\gear\food\Marmalade.p3d";
 		debug_ItemCategory = 6;
 		weight = 15;
@@ -736,7 +742,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class Zagorky_Empty : Edible_Base
+	class Zagorky_Empty : Zen_EmptyFood
 	{
 		model = "\dz\gear\food\Zagorky.p3d";
 		debug_ItemCategory = 6;
@@ -825,8 +831,7 @@ class CfgVehicles
 	class Empty_Zagorky : Zagorky_Empty
 	{
 		scope = 2;
-		displayName = "Empty Packet";
-		descriptionShort = "An empty food packet. It must have been recently discarded by a survivor...";
+		displayName = "$STR_Zagorky0";
 		varQuantityInit = 0;
 		varQuantityMin = 0;
 		varQuantityMax = 0;
@@ -842,8 +847,7 @@ class CfgVehicles
 	class Empty_ZagorkyChocolate : Zagorky_Empty
 	{
 		scope = 2;
-		displayName = "Empty Packet";
-		descriptionShort = "An empty food packet. It must have been recently discarded by a survivor...";
+		displayName = "$STR_ZagorkyChocolate0";
 		varQuantityInit = 0;
 		varQuantityMin = 0;
 		varQuantityMax = 0;
@@ -859,8 +863,7 @@ class CfgVehicles
 	class Empty_ZagorkyPeanuts : Zagorky_Empty
 	{
 		scope = 2;
-		displayName = "Empty Packet";
-		descriptionShort = "An empty food packet. It must have been recently discarded by a survivor...";
+		displayName = "$STR_ZagorkyPeanuts0";
 		varQuantityInit = 0;
 		varQuantityMin = 0;
 		varQuantityMax = 0;
@@ -873,7 +876,7 @@ class CfgVehicles
 			"\dz\gear\food\Data\zagorky_nuts_ca.paa"
 		};
 	};
-	class Empty_Snack_ColorBase : Edible_Base
+	class Empty_Snack_ColorBase : Zen_EmptyFood
 	{
 		model = "\DZ\gear\food\salty_crackers.p3d";
 		debug_ItemCategory = 6;
@@ -961,14 +964,12 @@ class CfgVehicles
 	class Empty_SaltySticks : Empty_Snack_ColorBase
 	{
 		scope = 2;
-		displayName = "Empty Packet";
-		descriptionShort = "An empty food packet. It must have been recently discarded by a survivor...";
+		displayName = "$STR_SaltySticks0";
 	};
 	class Empty_Crackers : Empty_Snack_ColorBase
 	{
 		scope = 2;
-		displayName = "Empty Packet";
-		descriptionShort = "An empty food packet. It must have been recently discarded by a survivor...";
+		displayName = "$STR_Crackers0";
 		hiddenSelections[] =
 		{
 			"camoGround"
@@ -981,8 +982,7 @@ class CfgVehicles
 	class Empty_Chips : Empty_Snack_ColorBase
 	{
 		scope = 2;
-		displayName = "Empty Packet";
-		descriptionShort = "An empty food packet. It must have been recently discarded by a survivor...";
+		displayName = "$STR_Chips0";
 		hiddenSelections[] =
 		{
 			"camoGround"
@@ -993,7 +993,7 @@ class CfgVehicles
 		};
 	};
 	// Canned food
-	class Empty_Can_Opened : Edible_Base
+	class Empty_Can_Opened : Zen_EmptyFood
 	{
 		scope = 2;
 		displayName = "Empty Can";
@@ -1061,43 +1061,37 @@ class CfgVehicles
 	class Empty_BakedBeansCan_Opened : Empty_Can_Opened
 	{
 		scope = 2;
-		displayName = "Empty Can";
-		descriptionShort = "An empty food can. It must have been recently discarded by a survivor...";
+		displayName = "$STR_BakedBeansCan0";
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\deez_beans_empty_co.paa" };
 	};
 	class Empty_PeachesCan_Opened : Empty_Can_Opened
 	{
 		scope = 2;
-		displayName = "Empty Can";
-		descriptionShort = "An empty food can. It must have been recently discarded by a survivor...";
+		displayName = "$STR_PeachesCan0";
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\canned_peaches_empty_co.paa" };
 	};
 	class Empty_TacticalBaconCan_Opened : Empty_Can_Opened
 	{
 		scope = 2;
-		displayName = "Empty Can";
-		descriptionShort = "An empty food can. It must have been recently discarded by a survivor...";
+		displayName = "$STR_TacticalBaconCan0";
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\tactical_bacon_empty_co.paa" };
 	};
 	class Empty_SpaghettiCan_Opened : Empty_Can_Opened
 	{
 		scope = 2;
-		displayName = "Empty Can";
-		descriptionShort = "An empty food can. It must have been recently discarded by a survivor...";
+		displayName = "$STR_SpaghettiCan0";
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\canned_spaghetti_empty_co.paa" };
 	};
 	class Empty_UnknownFoodCan_Opened : Empty_Can_Opened
 	{
 		scope = 2;
-		displayName = "Empty Can";
-		descriptionShort = "An empty food can. It must have been recently discarded by a survivor...";
+		displayName = "$STR_UnknownFoodCan0";
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\unknownfoodcan_empty_co.paa" };
 	};
-	class Empty_SardinesCan_Opened : Edible_Base
+	class Empty_SardinesCan_Opened : Zen_EmptyFood
 	{
 		scope = 2;
-		displayName = "Empty Can";
-		descriptionShort = "An empty food can. It must have been recently discarded by a survivor...";
+		displayName = "$STR_Sardines0";
 		model = "\dz\gear\food\can_sardines_open.p3d";
 		debug_ItemCategory = 6;
 		rotationFlags = 34;
@@ -1169,11 +1163,10 @@ class CfgVehicles
 			};
 		};
 	};
-	class Empty_TunaCan_Opened : Edible_Base // Tuna can doesn't allow retexture for some reason? Just spawn closed can instead for now.
+	class Empty_TunaCan_Opened : Zen_EmptyFood // Tuna can doesn't allow retexture for some reason? Just spawn closed can instead for now.
 	{
 		scope = 2;
-		displayName = "Empty Can";
-		descriptionShort = "An empty food can. It must have been recently discarded by a survivor...";
+		displayName = "$STR_TunaCan0";
 		model = "\dz\gear\food\Tuna.p3d";
 		debug_ItemCategory = 6;
 		rotationFlags = 32;
@@ -1245,11 +1238,9 @@ class CfgVehicles
 			};
 		};
 	};
-	class Empty_FoodCan_250g_Opened_ColorBase : Edible_Base
+	class Empty_FoodCan_250g_Opened_ColorBase : Zen_EmptyFood
 	{
 		scope = 2;
-		displayName = "Empty Can";
-		descriptionShort = "An empty food can. It must have been recently discarded by a survivor...";
 		debug_ItemCategory = 6;
 		model = "\dz\gear\food\FoodCan_250g_open.p3d";
 		itemSize[] = { 2,1 };
@@ -1315,43 +1306,121 @@ class CfgVehicles
 	class Empty_DogFoodCan_Opened : Empty_FoodCan_250g_Opened_ColorBase
 	{
 		scope = 2;
+		displayName = "$STR_DogFoodCan0";
 		hiddenSelections[] = { "camoGround" };
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\foodcan_250g_dog_empty_co.paa" };
 	};
 	class Empty_CatFoodCan_Opened : Empty_FoodCan_250g_Opened_ColorBase
 	{
 		scope = 2;
+		displayName = "$STR_CatFoodCan0";
 		hiddenSelections[] = { "camoGround" };
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\foodcan_250g_cat_empty_co.paa" };
 	};
 	class Empty_PorkCan_Opened : Empty_FoodCan_250g_Opened_ColorBase
 	{
 		scope = 2;
+		displayName = "$STR_PorkCan0";
 		hiddenSelections[] = { "camoGround" };
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\foodcan_250g_pork_empty_co.paa" };
 	};
 	class Empty_Lunchmeat_Opened : Empty_FoodCan_250g_Opened_ColorBase
 	{
 		scope = 2;
+		displayName = "$STR_Lunchmeat0";
 		hiddenSelections[] = { "camoGround" };
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\foodcan_lunchmeat_open_empty_co.paa" };
 	};
-	/*class Empty_Pajka_Opened : FoodCan_100g_Opened_ColorBase // Doesn't allow retexture for some reason?
+
+	// 100g cans
+	class Empty_FoodCan_100g_Opened_ColorBase : Zen_EmptyFood
 	{
-		scope = 2;
-		displayName = "Empty Container";
-		descriptionShort = "An empty food container. It must have been recently discarded by a survivor...";
+		debug_ItemCategory = 6;
+		model = "\dz\gear\food\FoodCan_100g_open.p3d";
+		itemSize[] = { 1,1 };
+		weight = 5;
 		varQuantityInit = 0;
 		varQuantityMin = 0;
 		varQuantityMax = 0;
-		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\foodcan_100g_pajka_empty_co.paa" };
-	};*/
-	class FoodCan_100g_Opened_ColorBase;
-	class Empty_Pate_Opened : FoodCan_100g_Opened_ColorBase
+		isMeleeWeapon = 1;
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 70;
+					healthLevels[] =
+					{
+
+						{
+							1,
+
+							{
+								"DZ\gear\food\data\FoodCan_100g.rvmat",
+								"DZ\gear\food\data\FoodCan_100g_white.rvmat",
+								"DZ\gear\food\data\FoodCan_100g_content.rvmat"
+							}
+						},
+
+						{
+							0.69999999,
+
+							{
+								"DZ\gear\food\data\FoodCan_100g.rvmat",
+								"DZ\gear\food\data\FoodCan_100g_white.rvmat",
+								"DZ\gear\food\data\FoodCan_100g_content.rvmat"
+							}
+						},
+
+						{
+							0.5,
+
+							{
+								"DZ\gear\food\data\FoodCan_100g_damage.rvmat",
+								"DZ\gear\food\data\FoodCan_100g_white_damage.rvmat",
+								"DZ\gear\food\data\FoodCan_100g_content_damage.rvmat"
+							}
+						},
+
+						{
+							0.30000001,
+
+							{
+								"DZ\gear\food\data\FoodCan_100g_damage.rvmat",
+								"DZ\gear\food\data\FoodCan_100g_white_damage.rvmat",
+								"DZ\gear\food\data\FoodCan_100g_content_damage.rvmat"
+							}
+						},
+
+						{
+							0,
+
+							{
+								"DZ\gear\food\data\FoodCan_100g_destruct.rvmat",
+								"DZ\gear\food\data\FoodCan_100g_white_destruct.rvmat",
+								"DZ\gear\food\data\FoodCan_100g_content_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
+	};
+	class Empty_Pajka_Opened : Empty_FoodCan_100g_Opened_ColorBase
 	{
 		scope = 2;
-		displayName = "Empty Container";
-		descriptionShort = "An empty food container. It must have been recently discarded by a survivor...";
+		displayName = "$STR_Pajka0";
+		varQuantityInit = 0;
+		varQuantityMin = 0;
+		varQuantityMax = 0;
+		hiddenSelections[] = { "camoGround" };
+		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\foodcan_100g_pajka_empty_co.paa" };
+	};
+	class Empty_Pate_Opened : Empty_FoodCan_100g_Opened_ColorBase
+	{
+		scope = 2;
+		displayName = "$STR_Pate0";
 		varQuantityInit = 0;
 		varQuantityMin = 0;
 		varQuantityMax = 0;
@@ -1367,33 +1436,89 @@ class CfgVehicles
 	class Empty_BrisketSpread_Opened : Empty_Pate_Opened
 	{
 		scope = 2;
-		displayName = "Empty Container";
-		descriptionShort = "An empty food container. It must have been recently discarded by a survivor...";
+		displayName = "$STR_BrisketSpread0";
 	};
 	// Define empty medical items
-	class BloodBagIV;
-	class Used_BloodBagIV : BloodBagIV
+	class Used_MedicalItem : Zen_EmptyFood 
+	{
+		displayNameUsed = "$STR_ZenLeftoversUsed";
+	};
+	class Used_BloodBagIV : Used_MedicalItem
 	{
 		scope = 2;
-		displayName = "Used Blood Bag";
-		descriptionShort = "A used blood bag. It must have been recently discarded by a survivor. I wonder if they're still alive...";
+		displayName = "$STR_CfgVehicles_BloodBagIV0";
+		model = "\dz\gear\medical\BloodBag_Full_IV.p3d";
 		hiddenSelections[] = { "zbytek" };
 		hiddenSelectionsTextures[] = { "\ZenLeftovers\data\bloodbag_used_ca.paa" };
+		itemSize[] = { 2,2 };
 		varQuantityInit = 0;
 		varQuantityMin = 0;
 		varQuantityMax = 0;
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 20;
+					healthLevels[] =
+					{
+
+						{
+							1,
+
+							{
+								"DZ\gear\medical\data\BloodBag_Full.rvmat"
+							}
+						},
+
+						{
+							0.69999999,
+
+							{
+								"DZ\gear\medical\data\BloodBag_Full.rvmat"
+							}
+						},
+
+						{
+							0.5,
+
+							{
+								"DZ\gear\medical\data\BloodBag_Full_damage.rvmat"
+							}
+						},
+
+						{
+							0.30000001,
+
+							{
+								"DZ\gear\medical\data\BloodBag_Full_damage.rvmat"
+							}
+						},
+
+						{
+							0,
+
+							{
+								"DZ\gear\medical\data\BloodBag_Full_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 	};
-	class Used_SalineBagIV : BloodBagIV
+	class Used_SalineBagIV : Used_MedicalItem
 	{
 		scope = 2;
-		displayName = "Used Saline Bag";
-		descriptionShort = "A used saline bag. It must have been recently discarded by a survivor. I wonder if they're still alive...";
+		displayName = "$STR_CfgVehicles_SalineBagIV0";
 		model = "\dz\gear\medical\TransfusionKit.p3d";
 		hiddenSelections[] = { "zbytek" };
 		hiddenSelectionsTextures[] = { "dz\gear\medical\data\saline_bag_ca.paa" };
 		varQuantityInit = 0;
 		varQuantityMin = 0;
 		varQuantityMax = 0;
+		itemSize[] = { 2,2 };
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -1443,11 +1568,10 @@ class CfgVehicles
 			};
 		};
 	};
-	class Used_Morphine : BloodBagIV
+	class Used_Morphine : Used_MedicalItem
 	{
 		scope = 2;
-		displayName = "Used Morphine";
-		descriptionShort = "A used morphine syringe. It must have been recently discarded by a survivor. I wonder if they're still alive...";
+		displayName = "$STR_CfgVehicles_Morphine0";
 		model = "\dz\gear\medical\Morphine.p3d";
 		rotationFlags = 17;
 		itemSize[] = { 1,2 };
@@ -1509,11 +1633,10 @@ class CfgVehicles
 			};
 		};
 	};
-	class Used_Epinephrine : BloodBagIV
+	class Used_Epinephrine : Used_MedicalItem
 	{
 		scope = 2;
-		displayName = "Used Epinephrine";
-		descriptionShort = "A used Epinephrine syringe. It must have been recently discarded by a survivor. I wonder if they're still alive...";
+		displayName = "$STR_CfgVehicles_Epinephrine0";
 		model = "\dz\gear\medical\Epinephrine.p3d";
 		debug_ItemCategory = 7;
 		rotationFlags = 17;
@@ -1576,11 +1699,10 @@ class CfgVehicles
 			};
 		};
 	};
-	class Used_AntiChemInjector : BloodBagIV
+	class Used_AntiChemInjector : Used_MedicalItem
 	{
 		scope = 2;
-		displayName = "Used PO-X Antidote";
-		descriptionShort = "A used PO-X Antidote syringe. It must have been recently discarded by a survivor. I wonder if they're still alive...";
+		displayName = "$STR_AntiChemInjector0";
 		model = "\dz\gear\medical\Epinephrine.p3d";
 		debug_ItemCategory = 7;
 		hiddenSelections[] =

@@ -8,6 +8,7 @@ modded class ModItemRegisterCallbacks
 		DayzPlayerItemBehaviorCfg 	toolsOneHanded = new DayzPlayerItemBehaviorCfg;
 		toolsOneHanded.SetToolsOneHanded();
 
+		// Food
         pType.AddItemInHandsProfileIK("Empty_BoxCerealCrunchin", "dz/anims/workspaces/player/player_main/props/player_main_1h_food_box.asi", toolsOneHanded, "dz/anims/anm/player/ik/gear/box_cereal.anm");
         pType.AddItemInHandsProfileIK("Empty_Rice", "dz/anims/workspaces/player/player_main/player_main_1h.asi", toolsOneHanded, "dz/anims/anm/player/ik/gear/rice.anm");
         pType.AddItemInHandsProfileIK("Empty_Marmalade", "dz/anims/workspaces/player/player_main/player_main_1h.asi", toolsOneHanded, "dz/anims/anm/player/ik/gear/marmalade.anm");
@@ -30,6 +31,11 @@ modded class ModItemRegisterCallbacks
 		pType.AddItemInHandsProfileIK("Empty_Zagorky_ColorBase", "dz/anims/workspaces/player/player_main/player_main_1h.asi", toolsOneHanded, "dz/anims/anm/player/ik/gear/zagorky.anm");
 		pType.AddItemInHandsProfileIK("Empty_Snack_ColorBase", "dz/anims/workspaces/player/player_main/player_main_1h.asi", toolsOneHanded, "dz/anims/anm/player/ik/gear/BloodBag_Sealed.anm");
 		pType.AddItemInHandsProfileIK("Empty_Crackers", "dz/anims/workspaces/player/player_main/player_main_1h.asi", toolsOneHanded, "dz/anims/anm/player/ik/gear/saltycrackers.anm");
-    
+		// Meds
+		pType.AddItemInHandsProfileIK("Used_Epinephrine", "dz/anims/workspaces/player/player_main/props/player_main_1h_morphine.asi", toolsOneHanded, "dz/anims/anm/player/ik/gear/morphine.anm");
+		pType.AddItemInHandsProfileIK("Used_Morphine", "dz/anims/workspaces/player/player_main/props/player_main_1h_morphine.asi", toolsOneHanded, "dz/anims/anm/player/ik/gear/morphine.anm");
+		pType.AddItemInHandsProfileIK("Used_AntiChemInjector", "dz/anims/workspaces/player/player_main/props/player_main_1h_morphine.asi", toolsOneHanded, "dz/anims/anm/player/ik/gear/morphine.anm");
+		pType.AddItemInHandsProfileIK("Used_BloodBagIV", "dz/anims/workspaces/player/player_main/player_main_1h.asi", toolsOneHanded, "dz/anims/anm/player/ik/gear/BloodBag_Full_IV.anm");
+		pType.AddItemInHandsProfileIK("Used_SalineBagIV", "dz/anims/workspaces/player/player_main/player_main_1h.asi", toolsOneHanded, "dz/anims/anm/player/ik/gear/TransfusionKit.anm");
     }
 }

@@ -65,6 +65,9 @@ class CraftJunkHookRecipe extends RecipeBase
 		InsertIngredient(1, "FangeKnife");
 		InsertIngredient(1, "Hacksaw");
 		InsertIngredient(1, "HandSaw");
+		InsertIngredient(1, "Hatchet");
+		InsertIngredient(1, "Woodaxe");
+		InsertIngredient(1, "FirefighterAxe");
 		InsertIngredient(1, "KitchenKnife");
 		InsertIngredient(1, "SteakKnife");
 		InsertIngredient(1, "HayHook");
