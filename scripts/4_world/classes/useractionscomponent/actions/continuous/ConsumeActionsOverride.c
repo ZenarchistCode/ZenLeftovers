@@ -10,7 +10,7 @@ void DropJunk(ActionData action_data)
 	{
 		LeftoverItem li = GetLeftoversConfig().GetLeftoverItem(item.GetType());
 
-		#ifdef NAMALSK_SURVIVAL
+		// Namalsk frozen item support
 		if (!li || li.OriginalItemType == "" || li.LeftoverItemType == "")
 		{
 			string itemType = item.GetType();
@@ -18,10 +18,9 @@ void DropJunk(ActionData action_data)
 			if (itemType.Contains("dzn_"))
 			{
 				itemType.Replace("dzn_", "");
-				li = GetLeftoversConfig().GetLeftoverItem(itemType); // Namalsk frozen item support
+				li = GetLeftoversConfig().GetLeftoverItem(itemType);
 			}
 		}
-		#endif
 
 		if (li && li.OriginalItemType != "" && li.LeftoverItemType != "") // Junk item found!
 		{

@@ -41,9 +41,9 @@ class ActionGetJunkPaper : ActionContinuousBase
 	{
 		if (action_data.m_MainItem && action_data.m_MainItem.GetHierarchyRootPlayer() == action_data.m_Player)
 		{
-				UnboxLambda lambda = new UnboxLambda(action_data.m_MainItem, "Paper", action_data.m_Player, 1);
-				action_data.m_Player.ServerReplaceItemInHandsWithNew(lambda);
-				action_data.m_Player.GetSoftSkillsManager().AddSpecialty(m_SpecialtyWeight);
+			UnboxLambda lambda = new UnboxLambda(action_data.m_MainItem, "Paper", action_data.m_Player, 1);
+			action_data.m_Player.ServerReplaceItemInHandsWithNew(lambda);
+			action_data.m_Player.GetSoftSkillsManager().AddSpecialty(m_SpecialtyWeight);
 		}
 	}
 };

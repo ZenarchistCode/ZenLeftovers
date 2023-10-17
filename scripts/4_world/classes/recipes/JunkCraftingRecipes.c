@@ -36,22 +36,22 @@ class CraftJunkHookRecipe extends RecipeBase
 
 		//INGREDIENTS
 		//ingredient 1 (junk)
-		InsertIngredient(0, "Empty_SodaCan_Pipsi");//you can insert multiple ingredients this way
-		InsertIngredient(0, "Empty_SodaCan_Cola");
-		InsertIngredient(0, "Empty_SodaCan_Spite");
-		InsertIngredient(0, "Empty_SodaCan_Kvass");
-		InsertIngredient(0, "Empty_SodaCan_Fronta");
-		InsertIngredient(0, "Empty_BakedBeansCan_Opened");
-		InsertIngredient(0, "Empty_PeachesCan_Opened");
-		InsertIngredient(0, "Empty_TacticalBaconCan_Opened");
-		InsertIngredient(0, "Empty_SpaghettiCan_Opened");
-		InsertIngredient(0, "Empty_UnknownFoodCan_Opened");
-		InsertIngredient(0, "Empty_SardinesCan_Opened");
-		InsertIngredient(0, "Empty_TunaCan_Opened");
-		InsertIngredient(0, "Empty_DogFoodCan_Opened");
-		InsertIngredient(0, "Empty_CatFoodCan_Opened");
-		InsertIngredient(0, "Empty_PorkCan_Opened");
-		InsertIngredient(0, "Empty_Lunchmeat_Opened");
+		InsertIngredientEx(0, "Empty_SodaCan_Pipsi", "openBeanCan");//you can insert multiple ingredients this way
+		InsertIngredientEx(0, "Empty_SodaCan_Cola", "openBeanCan");
+		InsertIngredientEx(0, "Empty_SodaCan_Spite", "openBeanCan");
+		InsertIngredientEx(0, "Empty_SodaCan_Kvass", "openBeanCan");
+		InsertIngredientEx(0, "Empty_SodaCan_Fronta", "openBeanCan");
+		InsertIngredientEx(0, "Empty_BakedBeansCan_Opened", "openBeanCan");
+		InsertIngredientEx(0, "Empty_PeachesCan_Opened", "openBeanCan");
+		InsertIngredientEx(0, "Empty_TacticalBaconCan_Opened", "openBeanCan");
+		InsertIngredientEx(0, "Empty_SpaghettiCan_Opened", "openBeanCan");
+		InsertIngredientEx(0, "Empty_UnknownFoodCan_Opened", "openBeanCan");
+		InsertIngredientEx(0, "Empty_SardinesCan_Opened", "openBeanCan");
+		InsertIngredientEx(0, "Empty_TunaCan_Opened", "openBeanCan");
+		InsertIngredientEx(0, "Empty_DogFoodCan_Opened", "openBeanCan");
+		InsertIngredientEx(0, "Empty_CatFoodCan_Opened", "openBeanCan");
+		InsertIngredientEx(0, "Empty_PorkCan_Opened", "openBeanCan");
+		InsertIngredientEx(0, "Empty_Lunchmeat_Opened", "openBeanCan");
 
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
 		m_IngredientSetHealth[0] = -1; // -1 = do nothing
@@ -94,24 +94,15 @@ class CraftJunkHookRecipe extends RecipeBase
 		//----------------------------------------------------------------------------------------------------------------------
 
 		//result1
-		//AddResult("Hook");//add results here
+		AddResult("Hook");//add results here
 
-		/*m_ResultSetFullQuantity[0] = false;//true = set full quantity, false = do nothing
+		m_ResultSetFullQuantity[0] = false;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = -1;//-1 = do nothing
-		m_ResultSetHealth[0] = 1; // Doesn't seem to work? Moving this to Do()
-		m_ResultInheritsHealth[0] = 0;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
+		m_ResultSetHealth[0] = 1; // Close to ruined
+		m_ResultInheritsHealth[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
 		m_ResultToInventory[0] = -2;//(value) == -2 spawn result on the ground;(value) == -1 place anywhere in the players inventory, (value) >= 0 means switch position with ingredient number(value)
 		m_ResultUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this result
-		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value*/
-	}
-
-	override void Do(ItemBase ingredients[], PlayerBase player, array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
-	{
-		ItemBase hook = ItemBase.Cast(GetGame().CreateObjectEx("Hook", player.GetPosition(), ECE_PLACE_ON_SURFACE));
-		if (hook)
-		{
-			hook.SetHealth(GetLeftoversConfig().CraftJunkHookHP);
-		}
+		m_ResultReplacesIngredient[0] = -1;// value == -1 means do nothing; a value >= 0 means this result will transfer item propertiesvariables, attachments etc.. from an ingredient value
 	}
 }
